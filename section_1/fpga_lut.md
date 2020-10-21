@@ -30,6 +30,20 @@
 | 1  | 0  | 1  | 1   |
 | 1  | 1  | 0  | 1   |
 | 1  | 1  | 1  | 0   |
+
+* 2 input LUT build with transistors:
+![](https://d3i71xaburhd42.cloudfront.net/85f2b6159e27360d1e0ba695f49501f75e64e49d/1-Figure1-1.png)
+>> a) truth table b) implementation c) optimized implementation
+
+### Transistors
+
+* elektrisch regelbarer Widerstand
+  
+![](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/logic-log43.gif)
+>> npn-Transistor
+
+
+
 ---
 
 Sources: 
