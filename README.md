@@ -7,10 +7,23 @@ Now cleaned up and going to be software only. Closer to being real.
 #### Section 1: Intro: Cheating our way past the transistor -- 0.5 weeks
 - So about those transistors -- Course overview. Describe how FPGAs are buildable using transistors, and that ICs are just collections of transistors in a nice reliable package. Understand the LUTs and stuff. Talk briefly about the theory of transistors, but all projects must build on each other so we can’t build one.
 - Emulation -- Building on real hardware limits the reach of this course. Using something like Verilator will allow anyone with a computer to play.
+- Todo:
+  - [x] What is a FPGA
+  - [ ] What is a transitor
+  - [x] LUTs build from transistors
+  - [x] Implement Binary Operation in LUT
+  - [x] From transistor to logic gates
+  - [x] Beispiel: Volladdier Wahrheitstabelle + Implentierung in IC
+  - [ ] transistor cmos and pmos logic
 
 #### Section 2: Bringup: What language is hardware coded in? -- 0.5 weeks
 - Blinking an LED(Verilog, 10) -- Your first little program! Getting the simulator working. Learning Verilog.
 - Building a UART(Verilog, 100) -- An intro chapter to Verilog, copy a real UART, introducing the concept of MMIO, though the serial port may be semihosting. Serial test echo program and led control.
+- Todo:
+  - [x] Verilog Tutorial
+  - [x] D-Flip-Flop
+  - [ ] Blinking LED
+  - [ ] UART
 
 #### Section 3: Processor: What is a processor anyway? -- 3 weeks
 - Coding an assembler(Python, 500) -- Straightforward and boring, write in python. Happens in parallel with the CPU building. Teaches you ARM assembly. Initially outputs just binary files, but changed when you write a linker.
