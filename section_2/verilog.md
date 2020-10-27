@@ -62,3 +62,5 @@ Handshake
 3. packet is sent serially; the receiving UART (rUART) samples the data line at the pre-configured baud rate
 4. rUART discards start and stop bit 
 5. rUART converts serial data back into parallel and transfers it to the data bus
+
+* useful [repo](https://github.com/hell03end/verilog-uart)
