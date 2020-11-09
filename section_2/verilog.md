@@ -1,10 +1,10 @@
-## Verilog
+# Verilog
 
-### Inroduction
+## Inroduction
 
 >> Read [this](https://www.chipverify.com/verilog/verilog-tutorial) page.
 
-### D-Flip-Flop Example
+## D-Flip-Flop Example
 ```verilog
 // d flip flop
 module dff (input d, rstn, clk, output q);
@@ -40,12 +40,26 @@ endmodule
 ```
 >> taken from [chipverify](https://www.chipverify.com/verilog/verilog-introduction)
 
-### Blinking LED Example
 
-* clock controls a led
+## Blinking LED Example
+
+```verilog
+module led (i_clk, o_led);
+    input wire i_clk;
+    output wire o_led;
+
+    reg [12:0] counter;  // changes every 20th cycle
+    initial counter = 0;
 
 
-### UART
+    always @(posedge i_clk)
+        counter <= counter + 1'b1;
+    assign o_led = counter[12];
+endmodule
+```
+
+
+## UART
 
 * baudrate (bruchteil 12 bit)
 * vor ändern der baudrate sicherstellen, dass keine Übertragung im Gange ist
@@ -63,4 +77,11 @@ Handshake
 4. rUART discards start and stop bit 
 5. rUART converts serial data back into parallel and transfers it to the data bus
 
-* useful [repo](https://github.com/hell03end/verilog-uart)
+---
+
+Sources:
+* [Blogpost: Taking a new look at verilator](https://zipcpu.com/blog/2017/06/21/looking-at-verilator.html)
+* [sample implementation](https://github.com/hell03end/verilog-uart)
+* [UART Simulator + Implementation](https://github.com/ZipCPU/wbuart32)
+* [FPGA design for Software Engineers](https://www.walknsqualk.com/post/014-tiny-fpga-bx/)
+* [Verilog: Formal and Beginner Tutorial](https://zipcpu.com/tutorial/)
